@@ -89,8 +89,8 @@ defmodule ProperCase do
   @doc """
   Converts an atom or string to a `snake_case` string`
   """
-  def snake_case(string) when is_atom(string) or is_binary(string) do
-    String.replace("#{string}", " ", "")
+  def snake_case(val) when is_atom(val) or is_binary(val) do
+    String.replace("#{val}", " ", "")
     |> Macro.underscore()
   end
 
